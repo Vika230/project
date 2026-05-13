@@ -1,107 +1,342 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open Systemy</title>
 
-<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header class="header">
-    <div class="container header__inner">
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header__inner">
 
-    <div class="logo">Open System</div>
+            <div class="logo">Open System</div>
 
-    <div class="burger">☰</div>
+            <div class="burger">☰</div>
 
-    <nav class="nav">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
-    </nav>
+            <nav class="nav">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
 
-</div>
-
-</header>
-
-
-<!-- HERO -->
- <section class="hero">
-    <div class="container hero__inner">
-
-    <div class="hero__content">
-        <h1>Engineering & Construction Solutions</h1>
-        <p>
-            We provide high-quality services in construction, installation and technical support 
-            for industrial and commercial projects.
-        </p>
-        <a href="#" class="btn">Get Consultation</a>
-    </div>
-
-</div>
-
-</section>
-
-<!-- MAIN CONTENT -->
-<section class="about">
-    <div class="container about__inner">
-
-    <div class="about__text">
-        <h2>About Our Company</h2>
-        <p>
-            Our company provides professional engineering and construction services.
-            We specialize in installation, maintenance, and technical support for various projects.
-        </p>
-        <p>
-            We focus on quality, reliability, and long-term cooperation with our clients.
-        </p>
-    </div>
-
-</div>
-
-</section>
-
-<section class="services">
-    
-    <div class="container">
-
-    <h2 class="section-title">Our Services</h2>
-
-    <div class="services__grid">
-
-        <div class="service">
-            <h3>Installation</h3>
-            <p>Professional installation of industrial equipment.</p>
         </div>
 
-        <div class="service">
-            <h3>Maintenance</h3>
-            <p>Regular maintenance and technical support.</p>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero reveal" id="home">
+        <div class="container hero__inner">
+
+            <div class="hero__content">
+                <h1>Engineering & Construction Solutions</h1>
+                <p>
+                    We provide high-quality services in construction, installation and technical support
+                    for industrial and commercial projects.
+                </p>
+                <a href="#" class="btn">Get Consultation</a>
+            </div>
+
         </div>
 
-        <div class="service">
-            <h3>Engineering</h3>
-            <p>Engineering solutions for complex projects.</p>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="about reveal" id="about">
+        <div class="container about__inner">
+
+            <div class="about__text">
+                <h2>About Our Company</h2>
+                <p>
+                    Our company provides professional engineering and construction services.
+                    We specialize in installation, maintenance, and technical support for various projects.
+                </p>
+                <p>
+                    We focus on quality, reliability, and long-term cooperation with our clients.
+                </p>
+            </div>
+
         </div>
 
-    </div>
+    </section>
 
-</div>
+    <section class="services reveal" id="services">
+        <div class="container">
 
-</section>
+            <h2 class="section-title">Our Services</h2>
+
+            <div class="services__grid">
+
+                <div class="service">
+                    <h3>Professional Training</h3>
+
+                    <p>
+                        Training programs and practical courses for technical specialists and employees.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <h3>Certification</h3>
+
+                    <p>
+                        Certification services according to industry standards and safety requirements.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <h3>Technical Consulting</h3>
+
+                    <p>
+                        Professional consulting and support for engineering and industrial projects.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="projects reveal" id="projects">
+        <div class="container">
+
+            <div class="projects-top">
+                <h2 class="section-title">Completed Projects</h2>
+
+                <p class="projects-subtitle">
+                    We successfully deliver industrial and engineering projects for modern businesses.
+                </p>
+            </div>
+
+            <div class="projects__grid">
+
+                <div class="projects__grid">
+
+                    <div class="project-card">
+
+                        <img src="images/project1.jpg" alt="">
+
+                        <div class="project-overlay">
+
+                            <h3>Training Programs</h3>
+
+                            <p>
+                                Professional industrial training and employee education.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-card">
+
+                        <img src="images/project2.jpg" alt="">
+
+                        <div class="project-overlay">
+
+                            <h3>Certification Services</h3>
+
+                            <p>
+                                Certification and qualification programs for specialists.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-card">
+
+                        <img src="images/project3.jpg" alt="">
+
+                        <div class="project-overlay">
+
+                            <h3>Technical Consulting</h3>
+
+                            <p>
+                                Professional consulting and support for engineering projects.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="stats reveal" id="stats">
+
+        <div class="container">
+
+            <div class="stats__grid">
+
+                <div class="stat">
+                    <h2>
+                        <span class="counter" data-target="25">0</span>+
+                    </h2>
+                    <p>Years Experience</p>
+                </div>
+
+                <div class="stat">
+                    <h2>
+                        <span class="counter" data-target="50000">0</span>+
+                    </h2>
+                    <p>Clients</p>
+                </div>
+
+                <div class="stat">
+                    <h2>
+                        <span class="counter" data-target="1000">0</span>+
+                    </h2>
+                    <p>Trained Specialists</p>
+                </div>
+
+                <div class="stat">
+                    <h2>24/7</h2>
+                    <p>Technical Support</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="why reveal" id="why">
+
+        <div class="container">
+
+            <div class="why-top">
+                <h2 class="section-title">Why Choose Us</h2>
+
+                <p>
+                    We provide reliable solutions, professional support and high-quality services for every client.
+                </p>
+            </div>
+
+            <div class="why__grid">
+
+                <div class="why-card">
+                    <h3>Professional Team</h3>
+
+                    <p>
+                        Experienced specialists with practical industry knowledge.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <h3>Modern Solutions</h3>
+
+                    <p>
+                        Innovative approaches and modern technologies for every project.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <h3>Reliable Support</h3>
+
+                    <p>
+                        Continuous support and communication during all project stages.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="contact reveal" id="contact">
+
+        <div class="container">
+
+            <div class="contact-top">
+                <h2 class="section-title">Contact Us</h2>
+
+                <p>
+                    Get in touch with our team for professional consultation and support.
+                </p>
+            </div>
+
+            <form class="contact-form">
+
+                <input type="text" placeholder="Your Name">
+
+                <input type="email" placeholder="Your Email">
+
+                <textarea placeholder="Your Message"></textarea>
+
+                <button type="submit" class="btn">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
 
 
-<!-- FOOTER -->
 
-<script src="main.js"></script>
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer__grid">
+
+                <div class="footer-column">
+
+                    <h3>Quick Links</h3>
+
+                    <a href="#home">Home</a> <a href="#about">About</a> <a href="#services">Services</a> <a
+                        href="#projects">Projects</a> <a href="#contact">Contact</a>
+
+                </div>
+
+                <div class="footer-column">
+
+                    <h3>Contact</h3>
+
+                    <p>Email: opensys@opensys.com.ua</p>
+
+                    <p>Phone: +38 (068) 916 36 85</p>
+                    
+                    <p>Khmelnitskyi, Ukraine </p>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Open System. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="main.js"></script>
 
 </body>
+
 </html>
