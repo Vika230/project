@@ -2,20 +2,20 @@ const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav');
 
 burger.addEventListener('click', function () {
-nav.classList.toggle('active');
+    nav.classList.toggle('active');
 });
 
 window.addEventListener('scroll', function () {
 
-const header = document.querySelector('.header');
+    const header = document.querySelector('.header');
 
-if(window.scrollY > 50) {
-    header.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
-}
+    if (window.scrollY > 50) {
+        header.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+    }
 
-else {
-    header.style.boxShadow = 'none';
-}
+    else {
+        header.style.boxShadow = 'none';
+    }
 
 });
 
@@ -25,87 +25,87 @@ window.addEventListener('scroll', revealSections);
 
 function revealSections() {
 
-reveals.forEach(function(section) {
+    reveals.forEach(function (section) {
 
-    const sectionTop = section.getBoundingClientRect().top;
+        const sectionTop = section.getBoundingClientRect().top;
 
-    const windowHeight = window.innerHeight;
+        const windowHeight = window.innerHeight;
 
-    if(sectionTop < windowHeight - 100) {
-        section.classList.add('active');
-    }
+        if (sectionTop < windowHeight - 100) {
+            section.classList.add('active');
+        }
 
-});
+    });
 
 }
 
 revealSections();
 
-const counters=document.querySelectorAll('.counter');
+const counters = document.querySelectorAll('.counter');
 
-let started=false;
+let started = false;
 
-window.addEventListener('scroll',()=>{
+window.addEventListener('scroll', () => {
 
-const statsSection=document.querySelector('.stats');
+    const statsSection = document.querySelector('.stats');
 
-const sectionTop=statsSection.offsetTop;
+    const sectionTop = statsSection.offsetTop;
 
-if(window.scrollY>sectionTop-500 && !started){
+    if (window.scrollY > sectionTop - 500 && !started) {
 
-counters.forEach(counter=>{
+        counters.forEach(counter => {
 
-const updateCounter=()=>{
+            const updateCounter = () => {
 
-const target=+counter.getAttribute('data-target');
-const current=+counter.innerText;
+                const target = +counter.getAttribute('data-target');
+                const current = +counter.innerText;
 
-const increment=target/100;
+                const increment = target / 100;
 
-if(current<target){
+                if (current < target) {
 
-counter.innerText=Math.ceil(current+increment);
+                    counter.innerText = Math.ceil(current + increment);
 
-setTimeout(updateCounter,20);
+                    setTimeout(updateCounter, 20);
 
-}
+                }
 
-else{
-counter.innerText=target;
-}
+                else {
+                    counter.innerText = target;
+                }
 
-};
+            };
 
-updateCounter();
+            updateCounter();
 
-});
+        });
 
-started=true;
+        started = true;
 
-}
-
-});
-
-const scrollTopBtn=document.querySelector('.scroll-top');
-
-window.addEventListener('scroll',()=>{
-
-if(window.scrollY>500){
-scrollTopBtn.classList.add('active');
-}
-
-else{
-scrollTopBtn.classList.remove('active');
-}
+    }
 
 });
 
-scrollTopBtn.addEventListener('click',()=>{
+const scrollTopBtn = document.querySelector('.scroll-top');
 
-window.scrollTo({
-top:0,
-behavior:'smooth'
+window.addEventListener('scroll', () => {
+
+    if (window.scrollY > 500) {
+        scrollTopBtn.classList.add('active');
+    }
+
+    else {
+        scrollTopBtn.classList.remove('active');
+    }
+
 });
+
+scrollTopBtn.addEventListener('click', () => {
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 
 });
 
@@ -114,26 +114,67 @@ const navLinks = document.querySelectorAll(".nav a");
 
 window.addEventListener("scroll", () => {
 
-let current = "";
+    let current = "";
 
-sections.forEach(section => {
+    sections.forEach(section => {
 
-const sectionTop = section.offsetTop;
+        const sectionTop = section.offsetTop;
 
-if(scrollY >= sectionTop - 150){
-current = section.getAttribute("id");
-}
+        if (scrollY >= sectionTop - 150) {
+            current = section.getAttribute("id");
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+
+    });
 
 });
 
-navLinks.forEach(link => {
+const swiper = new Swiper(".mySwiper", {
 
-link.classList.remove("active");
+    loop:true,
 
-if(link.getAttribute("href") === "#" + current){
-link.classList.add("active");
-}
+    speed:1000,
 
-});
+    grabCursor:true,
+
+    watchOverflow:true,
+
+    autoplay:{
+        delay:2500,
+        disableOnInteraction:false,
+    },
+
+    navigation:{
+        nextEl:".swiper-button-next",
+        prevEl:".swiper-button-prev",
+    },
+
+    breakpoints:{
+
+        0:{
+            slidesPerView:1,
+            spaceBetween:20,
+        },
+
+        768:{
+            slidesPerView:2,
+            spaceBetween:30,
+        },
+
+        1200:{
+            slidesPerView:3,
+            spaceBetween:40,
+        }
+
+    }
 
 });

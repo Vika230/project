@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 <head>
     <meta charset="UTF-8">
@@ -29,9 +30,9 @@
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
                 <a href="#projects">Projects</a>
+                <a href="partners.php">Partners</a>
                 <a href="#contact">Contact</a>
             </nav>
-
         </div>
 
     </header>
@@ -89,13 +90,14 @@
     </section>
 
     <section class="services reveal" id="services">
+
         <div class="container">
 
             <h2 class="section-title">Our Services</h2>
 
             <div class="services__grid">
 
-                <div class="service">
+                <div class="service-card">
                     <h3>Professional Training</h3>
 
                     <p>
@@ -103,7 +105,7 @@
                     </p>
                 </div>
 
-                <div class="service">
+                <div class="service-card">
                     <h3>Certification</h3>
 
                     <p>
@@ -111,13 +113,78 @@
                     </p>
                 </div>
 
-                <div class="service">
+                <div class="service-card">
                     <h3>Technical Consulting</h3>
 
                     <p>
                         Professional consulting and support for engineering and industrial projects.
                     </p>
                 </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="products">
+
+        <div class="container">
+
+            <h2 class="section-title">Company Products</h2>
+
+            <p class="products-subtitle">
+                From stand to cable
+            </p>
+
+            <div class="swiper mySwiper">
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+
+                        <div class="product-card">
+
+                            <img src="images/product1.jpg" alt="">
+
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-slide">
+
+                        <div class="product-card">
+
+                            <img src="images/product2.jpg" alt="">
+
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-slide">
+
+                        <div class="product-card">
+
+                            <img src="images/product3.jpg" alt="">
+
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-slide">
+
+                        <div class="product-card">
+
+                            <img src="images/product4.jpg" alt="">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
 
             </div>
 
@@ -281,32 +348,47 @@
         <div class="container">
 
             <div class="contact-top">
-                <h2 class="section-title">Contact Us</h2>
+
+                <h2 class="section-title">
+                    Contact Us
+                </h2>
 
                 <p>
                     Get in touch with our team for professional consultation and support.
                 </p>
+
             </div>
 
-            <form class="contact-form">
 
-                <input type="text" placeholder="Your Name">
+            <div class="contact-wrapper">
 
-                <input type="email" placeholder="Your Email">
+                <form class="contact-form" action="send.php" method="POST">
 
-                <textarea placeholder="Your Message"></textarea>
+                    <input type="text" name="name" placeholder="Your Name" required>
 
-                <button type="submit" class="btn">
-                    Send Message
-                </button>
+                    <input type="email" name="email" placeholder="Your Email" required>
 
-            </form>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+
+                    <button type="submit" class="btn">
+                        Send Message
+                    </button>
+
+                </form>
+
+
+                <div class="contact-image">
+
+                    <img src="images/contact.jpg" alt="">
+
+                </div>
+
+            </div>
 
         </div>
 
     </section>
-
-
+    </div>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -319,8 +401,12 @@
 
                     <h3>Quick Links</h3>
 
-                    <a href="#home">Home</a> <a href="#about">About</a> <a href="#services">Services</a> <a
-                        href="#projects">Projects</a> <a href="#contact">Contact</a>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                    <a href="partners.php">Partners</a>
 
                 </div>
 
@@ -350,6 +436,7 @@
 
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="main.js"></script>
 
